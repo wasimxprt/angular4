@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>{{srcpath}}
+<img [src]="" alt="">
+<ul>
+    <li *ngFor="let item of listItems">{{item}}</li>
+</ul>
+
+Username: <input type="text" name="username"><br> Password: <input type="password" name="password">
+<br><button (click)="onSelect()">Submit</button>

@@ -1,0 +1,2 @@
+<app-input-form (onPinkClick)="onPinkAdded($event)" (onIndigoClick)="onIndigoAdded($event)"></app-input-form>
+<app-display *ngFor="let color of colorArray" [colorElement]='color'></app-display>
