@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 export class DataBindingComponent implements OnInit {
 
 
-    colorArray = [{ color: 'pink', content: 'I am pink!' }];
+    colorArray = [{ color: 'pink', content: 'I am pink!' },{ color: 'indigo', content: 'I am indigo!' }];
+    
     onPinkAdded(inputText: { content: string }) {
         this.colorArray.push({ color: 'pink', content: inputText.content });
     }
