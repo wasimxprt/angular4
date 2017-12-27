@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { RouterModule, Routes } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
@@ -16,6 +17,7 @@ import { DisplayComponent } from './data-binding/app-display/app-display.compone
 
 
 import { SharedModule, FooterComponent, HeaderComponent } from './shared';
+import { AuthService } from './services/auth.service';
 
 
 const appRoutes: Routes = [
@@ -43,6 +45,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     SharedModule,
     HomeModule,
     FormsModule,
@@ -51,7 +54,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
